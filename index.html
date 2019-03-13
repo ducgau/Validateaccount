@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function validate_Account(str) {
+        regex = /^[_a-z0-9]{6,}$/;
+        if (regex.test(str)) {
+            return account + " la account hop le";
+        }
+        else {
+            return account + " la account khong hop le";
+        }
+    }
+    var account = "123abc_";
+    document.write(validate_Account(account) + "<br>");
+    account = "_abc123";
+    document.write(validate_Account(account)+ "<br>");
+    account = "________";
+    document.write(validate_Account(account)+ "<br>");
+    account = "123456";
+    document.write(validate_Account(account)+ "<br>");
+    account = "abcdefg";
+    document.write(validate_Account(account)+ "<br>");
+    account = ".@";
+    document.write(validate_Account(account)+ "<br>");
+    account = "12345";
+    document.write(validate_Account(account)+ "<br>");
+    account = "1234_";
+    document.write(validate_Account(account)+ "<br>");
+    account = "abcde";
+    document.write(validate_Account(account)+ "<br>");
+</script>
+</body>
+</html>
